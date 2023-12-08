@@ -13,12 +13,12 @@ export const LoginContainer = styled.div`
     text-align: center;
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    /* gap: 15px; */
   }
   .button-style {
     display: flex;
     align-items: center;
-    gap: 5px;
+    /* gap: 5px; */
     font-size: 13.3px;
     font-weight: 600;
   }

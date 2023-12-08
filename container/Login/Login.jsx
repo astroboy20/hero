@@ -6,13 +6,8 @@ import {
   Linkstyle,
   LoginContainer,
 } from "./Login.style";
-import { CustomText } from "@/components/CustomText";
-import { Input } from "@/components/Input";
-import { Button } from "@/components/Button";
 import Image from "next/image";
 import { useRouter } from "next/router";
-import { useSelector, useDispatch } from "react-redux";
-import { login, reset } from "@/feature/slices/authSlice";
 import { toast } from "react-toastify";
 import { Spinner } from "@/components/Spinner";
 import Link from "next/link";
@@ -20,13 +15,13 @@ import { useFormik } from "formik";
 import * as Yup from "yup";
 import axios from "axios";
 import { BackIcon, EmailIcon } from "@/assets";
+import { CustomText } from "@/components/CustomText";
+import { Input } from "@/components/Input";
+import { Button } from "@/components/Button";
 
 const Login = () => {
   const router = useRouter();
-  const dispatch = useDispatch();
-  const { user, isLoading, isError, isSuccess, message } = useSelector(
-    (state) => state.auth
-  );
+
   const formik = useFormik({
     initialValues: {
       email: "",
@@ -47,20 +42,7 @@ const Login = () => {
     },
   });
 
-  useEffect(() => {
-    if (isError) {
-      toast.error(message || "Email or password does not exist");
-    }
-    if (isSuccess && user) {
-      router.push("/dashboard");
-      toast.success("Login Successful");
-    }
-    dispatch(reset());
-  }, [router, user, isSuccess, isError, message, dispatch]);
-
-  const handleRoute = () => {
-    router.push("/register");
-  };
+ 
 
 const handleLoginWithGoogle = async (req, res) => {
   try {
@@ -87,7 +69,7 @@ const handleLoginWithGoogle = async (req, res) => {
     <>
       <LoginContainer>
         <FormHeader>
-          <span onClick={handleRoute}>
+          <span>
             <BackIcon />
           </span>
 
@@ -137,7 +119,7 @@ const handleLoginWithGoogle = async (req, res) => {
             </div>
 
             <Button type={"submit"} variant={"defaultButton"}>
-              {isLoading ? <Spinner /> : "Login"}
+              { "Login"}
             </Button>
           </form>
         </FormContainer>
@@ -158,7 +140,7 @@ const handleLoginWithGoogle = async (req, res) => {
             </div>
           </Button>
           <CustomText weight={"500"} type={"Htype"} variant={"h4"}>
-            Don`t have an account? <span onClick={handleRoute}>Sign Up</span>
+            Don`t have an account? <span>Sign Up</span>
           </CustomText>
         </div>
       </LoginContainer>
