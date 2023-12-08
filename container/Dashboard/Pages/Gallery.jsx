@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import axios from "axios";
-import { FeatureStyle, GalleryStyle } from "../Dashboard.style";
+import { Delete, FeatureStyle, GalleryStyle } from "../Dashboard.style";
 import { CustomText } from "@/components/CustomText";
 import { EditIcon, JoinIcon } from "@/assets";
 import Image from "next/image";
@@ -101,7 +101,7 @@ const Gallery = () => {
                         </div>
                         <div className="icons">
                           <JoinIcon />
-                          <MdDelete  width={"24px"} height={"24px"} />
+                          <Delete  />
                         </div>
                       </div>
                       <hr className="hr" />
