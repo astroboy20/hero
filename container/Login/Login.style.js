@@ -78,17 +78,18 @@ export const LoginContainer = styled.div`
 `;
 
 export const FormHeader = styled.header`
-  gap: 5px;
-  padding: 10px 0;
+  gap: 10px;
+  padding: 20px 0;
   display: flex;
   flex-direction: column;
   @media screen and (max-width: "800px") {
-    gap: 5px;
-    padding: 5px 0;
+    gap: 10px;
+    padding: 10px 0;
   }
 `;
 
 export const FormContainer = styled.div`
   display: flex;
   flex-direction: column;
+  gap:120px;
 `;

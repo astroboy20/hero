@@ -97,7 +97,7 @@ const Login = () => {
                     : null
                 }
               />
-              <Input placeholder='large size' size='lg' />
+              <br/>
               <Input
 
                 type="password"
