@@ -36,20 +36,20 @@ const Gallery = () => {
       });
   }, []);
 
-  // const deleteEvent = async (eventId) => {
-  //   try {
-  //     setIsLoading(true);
-  //     await axios.post(`https://api-cliqpod.koyeb.app/deleteEvent/${eventId}`, {
-  //       headers: {
-  //         Authorization: `Bearer ${accessToken}`,
-  //       },
-  //     });
+  const deleteEvent = async (eventId) => {
+    try {
+      setIsLoading(true);
+      await axios.post(`https://api-cliqpod.koyeb.app/deleteEvent/${eventId}`, {
+        headers: {
+          Authorization: `Bearer ${accessToken}`,
+        },
+      });
       
-  //   } catch (error) {
-  //     // console.error("Error deleting event:", error);
-  //     setIsLoading(false);
-  //   }
-  // };
+    } catch (error) {
+      // console.error("Error deleting event:", error);
+      setIsLoading(false);
+    }
+  };
   
   return (
     <>
@@ -101,7 +101,10 @@ const Gallery = () => {
                         </div>
                         <div className="icons">
                           <JoinIcon />
-                          <Delete  />
+                          <span onClick={deleteEvent(event._id)}>
+                          <Delete   />
+                          </span>
+                         
                         </div>
                       </div>
                       <hr className="hr" />

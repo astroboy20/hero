@@ -8,13 +8,9 @@ import {
 } from "./Login.style";
 import Image from "next/image";
 import { useRouter } from "next/router";
-import { toast } from "react-toastify";
-import { Spinner } from "@/components/Spinner";
 import Link from "next/link";
 import { useFormik } from "formik";
 import * as Yup from "yup";
-import axios from "axios";
-import { BackIcon, EmailIcon } from "@/assets";
 import { CustomText } from "@/components/CustomText";
 import { Button } from "@/components/Button";
 import { Input } from '@chakra-ui/react'
@@ -41,6 +37,9 @@ const Login = () => {
       await dispatch(login(values));
     },
   });
+  const handleRoute = ()=>{
+    router.push("/register")
+  }
 
   const handleLoginWithGoogle = async (req, res) => {
     try {
@@ -91,13 +90,15 @@ const Login = () => {
                 placeholder="Email"
                 name="email"
                 required
+                border={"1.5px solid #878e9c"}
+                padding={5}
                 error={
                   formik.errors?.email && formik.errors.email
                     ? `${formik.errors.email}`
                     : null
                 }
               />
-              <br/>
+            
               <Input
 
                 type="password"
@@ -105,6 +106,8 @@ const Login = () => {
                 onChange={formik.handleChange}
                 placeholder="Password"
                 name="password"
+                border={"1.5px solid #878e9c"}
+                padding={5}
                 required
                 error={
                   formik.errors?.password && formik.errors.password
@@ -148,7 +151,7 @@ const Login = () => {
               </div>
             </Button>
             <CustomText weight={"500"} type={"Htype"} variant={"h4"}>
-              Don`t have an account? <span>Sign Up</span>
+              Don`t have an account? <span onClick={handleRoute}>Sign Up</span>
             </CustomText>
           </div>
         </div>

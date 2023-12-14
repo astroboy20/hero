@@ -11,6 +11,7 @@ export const LoginContainer = styled.div`
   color: black;
   width: 100%;
   align-items: center;
+  height:100dvh ;
   .a {
     width: 50%;
   }
@@ -32,12 +33,12 @@ export const LoginContainer = styled.div`
     text-align: center;
     display: flex;
     flex-direction: column;
-    /* gap: 15px; */
+    gap: 15px;
   }
   .button-style {
     display: flex;
     align-items: center;
-    /* gap: 5px; */
+    gap: 5px;
     font-size: 13.3px;
     font-weight: 600;
   }
@@ -92,4 +93,11 @@ export const FormContainer = styled.div`
   display: flex;
   flex-direction: column;
   gap:120px;
+  form {
+    display: flex;
+  flex-direction: column;
+  gap:10px;
+    /* width:2000px ; */
+    /* gap:2000px; */
+  }
 `;
