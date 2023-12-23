@@ -61,10 +61,19 @@ const Register = () => {
         </div>
 
         <div className="right-container">
+        <div className="image">
+            <Image
+            width={"200"}
+            height={"200"}
+            src={"/images/HC.png"}
+            alt="banner"
+            // style={{textAlign:"center"}}
+          />
+          </div>
           <FormHeader>
-            <span onClick={handleHomeRoute}>
+            {/* <span onClick={handleHomeRoute}>
               <BackIcon />
-            </span>
+            </span> */}
 
             <CustomText weight={"500"} type={"Htype"} variant={"h1"}>
               Sign Up

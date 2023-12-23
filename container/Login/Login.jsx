@@ -65,7 +65,7 @@ const Login = () => {
   return (
     <>
       <LoginContainer>
-        <div className="a">
+        <div className="left-container">
           <Image
             width={"500"}
             height={"500"}
@@ -74,14 +74,25 @@ const Login = () => {
           />
         </div>
 
-        <div className="b">
+        <div className="right-container">
           <FormHeader>
+            <div className="image">
+            <Image
+            width={"200"}
+            height={"200"}
+            src={"/images/HC.png"}
+            alt="banner"
+            // style={{textAlign:"center"}}
+          />
+            </div>
+         
             <CustomText weight={"500"} type={"Htype"} variant={"h1"}>
               Sign In
             </CustomText>
           </FormHeader>
 
           <FormContainer>
+         
             <form onSubmit={formik.handleSubmit}>
               <Input
                 type="email"

@@ -8,7 +8,7 @@ const FormData = styled.div`
 
     width: 100%;
     flex-direction: column;
-    height: 100vh;
+    /* height: 100vh; */
     .sign-in {
       margin: 5% 0;
       text-align: center;
@@ -31,6 +31,9 @@ export const RegisterContainer = styled.div`
     width: 50%;
     padding: 0% 5%;
   }
+  .image{
+    display:none ;
+  }
   form {
     display: flex;
     flex-direction: column;
@@ -45,6 +48,11 @@ export const RegisterContainer = styled.div`
       width: 100%;
       padding: 0% 5%;
     }
+    .image{
+    display:flex ;
+    align-items:center ;
+    justify-content:center ;
+  }
   }
 `;
 

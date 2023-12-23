@@ -6,24 +6,30 @@ export const Linkstyle = {
   color: "black",
 };
 export const LoginContainer = styled.div`
+ padding: 5%;
+  height: 100dvh;
   display: inline-flex;
-  justify-content: space-between;
-  color: black;
   width: 100%;
-  align-items: center;
-  height:100dvh ;
-  .a {
+  .image{
+    display:none ;
+  }
+  .left-container {
     width: 50%;
   }
-  .b {
+  .right-container {
     width: 50%;
     padding: 0% 5%;
   }
    @media screen and (max-width:800px) {
-    .a{
+    .left-container{
       display:none ;
     }
-    .b{
+    .image{
+    display:flex ;
+    align-items:center ;
+    justify-content:center ;
+  }
+    .right-container{
       width:100% ;
       padding:0 5% ;
     }
