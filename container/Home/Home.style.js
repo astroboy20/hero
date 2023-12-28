@@ -1,17 +1,36 @@
 import styled from "styled-components";
 import { responsive } from "@/theme/responsive";
 
-export const Homestyle = styled.div``;
-export const Container = styled.div`
+export const Homestyle = styled.div`
+  
+`;
+export const Header = styled.header`
+  padding: 2% 5%;
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
   text-align: center;
+  background: #fff;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.1);
   gap: 10px;
+  .logo {
+  }
+  .nav {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  .icons{
+    display:none ;
+  }
+  @media screen and (max-width:800px) {
+    
+  }
 `;
 export const StepOnestyle = styled.div`
-  background: url("/images/home.png") ;
+  background: url("/images/home.png");
   background-repeat: no-repeat;
-  height:70vh;
+  height: 70vh;
   background-size: cover;
   width: 100%;
   .text {
