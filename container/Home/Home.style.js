@@ -2,7 +2,8 @@ import styled from "styled-components";
 import { responsive } from "@/theme/responsive";
 
 export const Homestyle = styled.div`
-  
+  height: 100dvh;
+  width: 100%;
 `;
 export const Header = styled.header`
   padding: 2% 5%;
@@ -20,52 +21,56 @@ export const Header = styled.header`
     align-items: center;
     gap: 20px;
   }
-  .icons{
-    display:none ;
+  .icons {
+    display: none;
   }
-  @media screen and (max-width:800px) {
-    
-  }
-`;
-export const StepOnestyle = styled.div`
-  background: url("/images/home.png");
-  background-repeat: no-repeat;
-  height: 70vh;
-  background-size: cover;
-  width: 100%;
-  .text {
-    display: flex;
-    flex-direction: column;
-    /* gap: 20999px; */
-    padding: 5%;
+  @media screen and (max-width: 800px) {
+    .icons {
+      display: block;
+    }
+    .nav {
+      display: none;
+    }
   }
 `;
-
-export const StepTwostyle = styled.div`
-  background: url("/images/event.png");
-  background-repeat: no-repeat;
-  /* height:80vh; */
-  background-size: cover;
-  height: 70vh;
-  .text {
-    display: flex;
-    /* flex-direction: column; */
-    padding: 5%;
-  }
-`;
-export const StepThreestyle = styled.div`
-  background: url("/images/real-qr.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  display: flex;
-  flex-direction: column;
+export const Introduction = styled.div`
+  display: inline-flex;
+  justify-content: space-around;
   align-items: center;
-  height: 70vh;
+  padding: 5%;
   width: 100%;
   .text {
-    display: flex;
-    flex-direction: column;
-    padding: 5%;
+    width: 50%;
+    padding-right: 5%;
+    display:flex ;
+    flex-direction:column ;
+    gap:10px;
+    text-align:left ;
+  }
+  h1 {
+    font-size: 40px;
+  }
+  button {
+    background: #68c86c;
+    color: #fff;
+    border: none;
+    padding:10px ;
+    border-radius:10px ;
+  }
+  .image {
+    width: 50%;
+    border-radius: 10px;
+    width:50% ;
+  }
+  @media screen and (max-width: 800px) {
+    .image {
+      display: none;
+    }
+    .text {
+      width:100% ;
+      text-align:center ;
+      gap:20px;
+    }
   }
 `;
 export const StepFourstyle = styled.div`
