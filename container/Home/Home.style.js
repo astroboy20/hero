@@ -42,10 +42,10 @@ export const Introduction = styled.div`
   .text {
     width: 50%;
     padding-right: 5%;
-    display:flex ;
-    flex-direction:column ;
-    gap:10px;
-    text-align:left ;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: left;
   }
   h1 {
     font-size: 40px;
@@ -54,37 +54,47 @@ export const Introduction = styled.div`
     background: #68c86c;
     color: #fff;
     border: none;
-    padding:10px ;
-    border-radius:10px ;
+    padding: 10px;
+    border-radius: 10px;
   }
   .image {
     width: 50%;
     border-radius: 10px;
-    width:50% ;
+    width: 50%;
   }
   @media screen and (max-width: 800px) {
     .image {
       display: none;
     }
     .text {
-      width:100% ;
-      text-align:center ;
-      gap:20px;
+      width: 100%;
+      text-align: center;
+      gap: 20px;
     }
   }
 `;
-export const StepFourstyle = styled.div`
-  background: url("/images/gallery.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+export const WhyStyle = styled.div`
+ text-align:center ;
   width: 100%;
-  height: 70vh;
+  padding: 5%;
   .text {
     display: flex;
-    flex-direction: column;
-    padding: 5%;
+    justify-content: space-between;
+    text-align:left ;
+    padding-top:2% ;
+  }
+  .sub-text {
+    width: 30%;
+  }
+
+  @media screen and (max-width: 800px) {
+    .text {
+      flex-direction:column ;
+      gap:20px;
+      text-align:center ;
+    }
+    .sub-text {
+      width:100% ;
+    }
   }
 `;

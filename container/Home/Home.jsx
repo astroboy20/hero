@@ -1,6 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 import { useState } from "react";
-import { Header, Homestyle, Introduction } from "./Home.style";
+import { Header, Homestyle, Introduction, WhyStyle } from "./Home.style";
 import { Button } from "@/components/Button";
 import { useRouter } from "next/router";
 import Image from "next/image";
@@ -70,16 +70,31 @@ const HomePage = () => {
               alt="intro-image"
             />
           </div>
-
         </Introduction>
+        <WhyStyle>
+          <div className="header">Why Choose Hero Collection?</div>
+          <div className="text">
+            <div className="sub-text">
+              Quality Craftsmanship: Every garment at Hero Collection is
+              meticulously crafted with a focus on superior quality and style.
+              We select the finest materials and pay attention to every detail,
+              ensuring you receive fashion that speaks of excellence.
+            </div>
+            <div className="sub-text">
+              Versatile Selection: Explore our diverse collection encompassing
+              an array of styles, cuts, and designs. From chic everyday wear to
+              elegant formal attire, discover the perfect ensemble that reflects
+              your unique taste.
+            </div>
+            <div className="sub-text">
+              Exclusive Offers: Indulge in irresistible deals and exclusive
+              offers regularly. At Hero Collection, we're dedicated to making
+              luxury fashion accessible to all fashion enthusiasts.
+            sub-text</div>
+          </div>
+        </WhyStyle>
         {/* <div>
-          . Why Choose Us? Quality Assurance: We handpick each product, ensuring
-          top-notch quality and reliability, so you can shop with confidence.
-          Wide Variety: Explore our extensive collection that spans across
-          categories like electronics, fashion, home essentials, and more. Find
-          what you need, all in one place. Great Deals: Enjoy fantastic deals
-          and exclusive offers regularly. We believe in making luxury affordable
-          for all. Our Promise to You At [Your E-commerce Store Name], customer
+ Our Promise to You At [Your E-commerce Store Name], customer
           satisfaction is our priority. We guarantee: Secure Transactions: Your
           data is safe with us. Shop securely with our encrypted payment
           gateways. Fast Shipping: We strive to deliver your orders swiftly,
