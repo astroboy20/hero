@@ -50,8 +50,8 @@ const HomePage = () => {
             />
           </div>
         </Header>
-        <Introduction>
-          <div className="text">
+        <Introduction data-aos="zoom-in">
+          <div data-aos="zoom-in" className="text">
             <h1>Welcome to Hero Collection</h1>
             <p>
               Discover Fashion that Defines Style! At Hero Collection, indulge
@@ -71,8 +71,8 @@ const HomePage = () => {
             />
           </div>
         </Introduction>
-        <WhyStyle>
-          <div className="header">Why Choose Hero Collection?</div>
+        <WhyStyle data-aos="zoom-in">
+          <div data-aos="fade-up" className="header">Why Choose Hero Collection?</div>
           <div className="text">
             <div className="sub-text">
               Quality Craftsmanship: Every garment at Hero Collection is
@@ -90,11 +90,28 @@ const HomePage = () => {
               Exclusive Offers: Indulge in irresistible deals and exclusive
               offers regularly. At Hero Collection, we're dedicated to making
               luxury fashion accessible to all fashion enthusiasts.
-            sub-text</div>
+            </div>
+          </div>
+        </WhyStyle>
+        <WhyStyle >
+          <div data-aos="fade-up" className="header"> Our Promise to You</div>
+          <div className="text">
+            <div className="sub-text">
+              Secure Transactions: Your data is safe with us. Shop securely with
+              our encrypted payment gateways.
+            </div>
+            <div className="sub-text">
+              Fast Shipping: We strive to deliver your orders swiftly, right to
+              your doorstep.
+            </div>
+            <div className="sub-text">
+              24/7 Customer Support: Need assistance? Our dedicated support team
+              is here to help, anytime.
+            </div>
           </div>
         </WhyStyle>
         {/* <div>
- Our Promise to You At [Your E-commerce Store Name], customer
+ At [Your E-commerce Store Name], customer
           satisfaction is our priority. We guarantee: Secure Transactions: Your
           data is safe with us. Shop securely with our encrypted payment
           gateways. Fast Shipping: We strive to deliver your orders swiftly,

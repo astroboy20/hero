@@ -37,7 +37,7 @@ export const Introduction = styled.div`
   display: inline-flex;
   justify-content: space-around;
   align-items: center;
-  padding: 5%;
+  padding:2% 5%;
   width: 100%;
   .text {
     width: 50%;
@@ -76,12 +76,15 @@ export const Introduction = styled.div`
 export const WhyStyle = styled.div`
  text-align:center ;
   width: 100%;
-  padding: 5%;
+  padding: 2% 5%;
   .text {
     display: flex;
     justify-content: space-between;
     text-align:left ;
     padding-top:2% ;
+  }
+  .header{
+    font-weight:700 ;
   }
   .sub-text {
     width: 30%;
