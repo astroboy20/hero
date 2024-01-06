@@ -1,6 +1,13 @@
 /* eslint-disable react/no-unescaped-entities */
 import { useState } from "react";
-import { Header, Homestyle, Introduction, WhyStyle } from "./Home.style";
+import {
+  Categories,
+  Header,
+  Homestyle,
+  Introduction,
+  PromiseStyle,
+  WhyStyle,
+} from "./Home.style";
 import { Button } from "@/components/Button";
 import { useRouter } from "next/router";
 import Image from "next/image";
@@ -72,7 +79,9 @@ const HomePage = () => {
           </div>
         </Introduction>
         <WhyStyle data-aos="zoom-in">
-          <div data-aos="fade-up" className="header">Why Choose Hero Collection?</div>
+          <div data-aos="fade-up" className="header">
+            Why Choose Hero Collection?
+          </div>
           <div className="text">
             <div className="sub-text">
               Quality Craftsmanship: Every garment at Hero Collection is
@@ -93,8 +102,11 @@ const HomePage = () => {
             </div>
           </div>
         </WhyStyle>
-        <WhyStyle >
-          <div data-aos="fade-up" className="header"> Our Promise to You</div>
+        <PromiseStyle>
+          <div data-aos="fade-up" className="header">
+            {" "}
+            Our Promise to You
+          </div>
           <div className="text">
             <div className="sub-text">
               Secure Transactions: Your data is safe with us. Shop securely with
@@ -109,15 +121,11 @@ const HomePage = () => {
               is here to help, anytime.
             </div>
           </div>
-        </WhyStyle>
-        {/* <div>
- At [Your E-commerce Store Name], customer
-          satisfaction is our priority. We guarantee: Secure Transactions: Your
-          data is safe with us. Shop securely with our encrypted payment
-          gateways. Fast Shipping: We strive to deliver your orders swiftly,
-          right to your doorstep. 24/7 Customer Support: Need assistance? Our
-          dedicated support team is here to help, anytime.
-        </div> */}
+        </PromiseStyle>
+        <Categories>
+          JACKET ROUND NECK LONG SLEEVES POLO LONG AND SHORT SOCKS JEAN SHORT
+          LUMBA SHORT HODDIES
+        </Categories>
       </Homestyle>
     </>
   );
